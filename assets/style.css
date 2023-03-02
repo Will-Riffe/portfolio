@@ -29,11 +29,12 @@ header.home {
   max-height: 50vh;
   grid-template-columns: repeat(7, 14.28vw);
   grid-template-rows: repeat(5, 14.28vw);
+  margin-bottom:200px;
 }
 
 h1,
 h2,
-button,
+a,
 img {
   font-family: var(--font-family);
 }
@@ -49,7 +50,7 @@ h2 {
   font-style: italic;
 }
 
-button {
+a {
   font-size: var(--font-size-button);
   background-color: var(--outer-color);
   background-image: var(--bg-gradient);
@@ -86,7 +87,7 @@ img {
 
 main.home {
   display: flex;
-  margin: 14.28vw;
+  margin: 28.56vw 14.28vw 14.28vw 14.28vw;
   border: 1px solid var(--textc);
 }
 
@@ -96,7 +97,7 @@ main.home {
     grid-template-rows: repeat(16, 14.28vw);
   }
 
-  button {
+  a {
     box-shadow: var(--small-box-shadow);
   }
 
