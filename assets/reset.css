@@ -12,7 +12,7 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, footer, header, hgroup, 
+article, canvas, details, embed, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -24,7 +24,7 @@ time, mark, audio, video {
 	text-decoration:none;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, 
+article, details, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }

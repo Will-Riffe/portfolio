@@ -1,12 +1,14 @@
 :root {
   --outer-color: #d5c095;
   --inner-color: #faebd7;
+  --upper-color-a: #F5E5CE; 
   --textc: #880000;
   --font-family: "IM Fell English", serif;
   --font-size-h1: 30pt;
   --font-size-h2: 20pt;
   --font-size-button: 16pt;
   --bg-gradient: linear-gradient(0deg, var(--inner-color), var(--outer-color));
+  --bg-gradient-a: linear-gradient(0deg, var(--upper-color-a), var(--inner-color));
   --box-shadow: 0px -20px 40px 0px rgba(0, 0, 0, 0.8);
   --small-box-shadow: 0px -10px 25px 0px rgba(0, 0, 0, 0.8);
   --seventh: 14.28vw;
@@ -59,6 +61,14 @@ h3 {
   color: var(--inner-color);
   font-family: var(--font-family);
   flex-grow: 1;
+  font-size:16pt;
+}
+
+h4 {
+  font-size: 12pt;
+  font-weight: 600;
+  text-align:left;
+
 }
 
 body a.home {
@@ -84,10 +94,6 @@ section figure img {
   flex: 1;
 }
 
-section figure img.selfie {
-  width: calc(1 * var(--seventh));
-  height: auto;
-}
 
 img.body {
   grid-column: 4;
@@ -117,7 +123,7 @@ img.body {
 main.home {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding: 20px;
   margin: calc(2 * var(--seventh)) 0 var(--seventh) 0;
 }
@@ -127,8 +133,29 @@ main section {
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin: 10px;
-  padding: 20px;
-  width: calc(7 * var(--seventh));
+  padding: 20px; 
+  min-width: calc(2*var(--seventh));
+  text-align:center;
+
+}
+
+main section.gradient {
+  background-image: var(--bg-gradient-a);
+}
+
+main section a {
+  color:blue;
+  text-align:center;
+}
+
+main section h4.about {
+  text-align:right;
+}
+
+figure img.selfie {
+  max-width: 100%;
+  height: auto;
+  display:block;
 }
 
 /* Small devices (phones, 768px to 450px) */
@@ -137,7 +164,7 @@ main section {
     grid-template-rows: repeat(16, var(--seventh));
   }
 
-  body a {
+  body header a {
     box-shadow: var(--small-box-shadow);
   }
 
